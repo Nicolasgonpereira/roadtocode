@@ -1,46 +1,45 @@
-# Getting Started with Create React App
+🚧 **Under Construction** 🚧
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Road to Code - Meu Portfólio
 
-## Available Scripts
+Este é o meu portfólio online desenvolvido com React, projetado para apresentar meus projetos e habilidades de forma organizada e acessível. Este site serve como um ponto central para que recrutadores e interessados possam conhecer melhor meu trabalho, além de acompanhar meu progresso e aprendizados através do blog.
 
-In the project directory, you can run:
+## Funcionalidades
 
-### `npm start`
+- **Portfólio de Projetos:** Uma seção dedicada aos projetos que desenvolvi, com detalhes sobre cada um, tecnologias utilizadas e links para o código-fonte no GitHub.
+- **Blog:** Compartilho posts sobre ideias, mecanismos e conceitos que estou estudando ou que aprendi. Esta seção é uma forma de documentar minha jornada como desenvolvedor e contribuir com a comunidade.
+- **Design Responsivo:** O site é totalmente responsivo, garantindo uma boa experiência em dispositivos móveis e desktops.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Tecnologias Utilizadas
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- **React:** Biblioteca principal para construção da interface do usuário.
+- **Styled Components:** Para a criação de estilos customizados de maneira modular e reutilizável.
+- **React Router:** Para gerenciar a navegação no site.
 
-### `npm test`
+## Objetivo
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+O objetivo deste projeto é mostrar minhas habilidades de desenvolvimento, facilitando o acesso a informações sobre mim e meu trabalho. Além disso, o blog servirá como um registro contínuo da minha evolução e das tecnologias que estou explorando.
 
-### `npm run build`
+## Como Executar o Projeto
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clone o repositório:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   ```bash
+   git clone https://github.com/Nicolasgonpereira/roadtocode.git
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. Acesse o diretório do projeto:
 
-### `npm run eject`
+    ```bash
+    cd roadtocode
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+3. Instale as dependências do projeto:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    ```bash
+    npm install
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+4. Execute o projeto:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+    ```bash
+    npm run start
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+É necessário ter o nodeJS instalado no computador.
