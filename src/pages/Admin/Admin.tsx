@@ -7,6 +7,7 @@ import BlogCard from "../Blog/BlogCard";
 import PostContent from "../Blog/PostContent";
 import { IProject } from "../Projects/Projects";
 
+// CONTEÚDO USADO PARA ESTILIZAR O COMPONENTE DE TEXTO DO BLOG
 const conteudoGPT = `<article>
     <h2>Getting Started with Node.js</h2>
     <p>Node.js is a powerful and flexible platform for building fast and scalable network applications. In this post, we will cover the basics of getting started with Node.js.</p>
