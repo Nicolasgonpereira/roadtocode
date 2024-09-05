@@ -2,7 +2,7 @@
 
 # Road to Code - Meu Portfólio
 
-Este é o meu portfólio online desenvolvido com React, projetado para apresentar meus projetos e habilidades de forma organizada e acessível. Este site serve como um ponto central para que recrutadores e interessados possam conhecer melhor meu trabalho, além de acompanhar meu progresso e aprendizados através do blog.
+Este é o meu portfólio online desenvolvido com React, projetado para apresentar meus projetos e habilidades de forma organizada e acessível. Este site serve como um ponto central para que interessados possam conhecer melhor meu trabalho, além de acompanhar meu progresso e aprendizados através do blog.
 
 ## Funcionalidades
 
