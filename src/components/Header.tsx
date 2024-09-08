@@ -91,7 +91,7 @@ export default function Header() {
                     {/* <NavListItem><StyledLink to="/about">Sobre</StyledLink></NavListItem> */}
                     <NavListItem><StyledLink to="/projects">Projetos</StyledLink></NavListItem>
                     <NavListItem><StyledLink to="/blog">Blog</StyledLink></NavListItem>
-                    <NavListItem><StyledLink to="/admin">Admin</StyledLink></NavListItem>
+                    {/* <NavListItem><StyledLink to="/admin">Admin</StyledLink></NavListItem> */}
                     {/* <NavListItem><StyledLink to="/contact">Contato</StyledLink></NavListItem> */}
                 </NavList>
             </NavContainer>
