@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import Heroimg from "../../assets/Hero-Section.jpg";
+import Heroimg from "../../assets/blog-card-skeleton.jpg";
 
 const HeroSectionContainer = styled.section`
     display: flex;
