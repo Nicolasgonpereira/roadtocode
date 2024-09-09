@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import HardSkillCard from '../../components/HardSkillCard';
 import { formatDate } from '../Blog/BlogCard';
 
-const Article = styled.article<{$boxAlign:string;}>`
+const Article = styled.article`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -49,6 +49,7 @@ const Title = styled.h2`
 `;
 
 const Summary = styled.p`
+  font-size:1.25rem;
   margin: 1rem 0;
   text-align: justify;
 `;
@@ -58,9 +59,9 @@ const DateWrapper = styled.p`
   margin: 0 0;
 `;
 
-const SkillUsedWrapper = styled.div<{$boxAlign:string;}>`
+const SkillUsedWrapper = styled.div`
   display: flex;
-  justify-content: ${props=>props.$boxAlign ==='right'?'end':''};
+  justify-content: left;
   align-items: center;
   margin-top: 1rem;
 
@@ -79,12 +80,14 @@ const ButtonGitHub = styled.button<{disabled?: boolean}>`
   opacity: ${props=>props.disabled?0.5:''};
 `
 
-const ButtonLive = styled.button`
+const ButtonLive = styled.button<{disabled?: boolean}>`
   box-sizing: content-box;
   border: none;
   width: 40px;
   height: 40px;
   margin: 0 0;
+  cursor: ${props=>props.disabled?'default':'pointer'};
+  opacity: ${props=>props.disabled?0.5:''};
 `
 
 const TitleWrapper = styled.div`
@@ -115,16 +118,16 @@ interface Props {
   tech: Array<string>;
 }
 
-export default function ProjectCard({projectInfo, align}:{projectInfo:Props, align:'left'|'right'}) {
+export default function ProjectCard({projectInfo}:{projectInfo:Props}) {
     return (
-    <Article $boxAlign={align}>
+    <Article>
       <TitleWrapper>
         <Title>{projectInfo.title}</Title>
         <div style={{display:'flex', flexDirection:'row', alignItems:'center'}}>
           <ButtonGitHub as={projectInfo.github===""?'button':'a'} href={projectInfo.github} target='_blank' disabled={projectInfo.github===""}>
             <FaGithub style={{width:'40px',height:'40px'}} />
           </ButtonGitHub>
-          <ButtonLive as={'a'} href={projectInfo.live} target='_blank'>
+          <ButtonLive as={projectInfo.live===""?'button':'a'} href={projectInfo.live} target='_blank' disabled={projectInfo.live===""}>
             <IoRadio style={{width:'40px',height:'40px'}} />
           </ButtonLive>
         </div>
@@ -136,7 +139,7 @@ export default function ProjectCard({projectInfo, align}:{projectInfo:Props, ali
           <InfoWrapper>
             <Summary>{projectInfo.description}</Summary>
             <DateWrapper>{formatDate(projectInfo.date)}</DateWrapper>
-            <SkillUsedWrapper $boxAlign={align}>
+            <SkillUsedWrapper>
               {projectInfo.tech.map(e=>(
                 <HardSkillCard key={e} tech={e}/>
               ))}

@@ -55,8 +55,7 @@ export default function Projects() {
             </h3>
             {projectList && projectList.items.map((project:IProject, index:number)=>(
                 <>
-                    <ProjectCard key={project.title} projectInfo={project}
-                        align={index%2===0?'left':'right'}/>
+                    <ProjectCard key={project.title} projectInfo={project} />
                 </>
             ))}
         </ProjectWrapper>
