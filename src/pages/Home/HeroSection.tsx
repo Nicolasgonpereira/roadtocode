@@ -32,6 +32,7 @@ const InfoContainer = styled.div`
 `
 
 const Title = styled.h2`
+    font-size: 1.75rem;
     font-weight: 400;
     text-align: justify;
 `
@@ -42,7 +43,7 @@ const ButtonContained = styled.button`
     border: none;
     border-radius: 1rem;
     height: 2rem;
-    font-size: 1rem;
+    font-size: 1.25rem;
     font-weight: 600;
     padding: 1rem;
     text-decoration: none;
@@ -56,7 +57,7 @@ const ButtonOutline = styled.button`
     border: none;
     border-radius: 1rem;
     height: 2rem;
-    font-size: 1rem;
+    font-size: 1.25rem;
     font-weight: 600;
     padding: 1rem;
     text-align: center;

@@ -220,7 +220,6 @@ export default function Admin() {
     const handleSubmitProject = (e:React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         setIsAddingProject(false);
-        console.log(formDataProject);
         AddNewProject(formDataProject);
         setFormDataProject({
             id:'',
