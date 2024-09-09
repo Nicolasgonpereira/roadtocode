@@ -8,7 +8,7 @@ const Article = styled.article<{$boxAlign:string;}>`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 2rem 0;
+  margin: 2rem 0 0;
   justify-content: center;
   width: 80%;
   max-width: 100%;
