@@ -33,6 +33,7 @@ const NavList = styled.ul<{ $isOpen?: boolean;}>`
 `
 
 const NavListItem = styled.li`
+    font-size: 1.5rem;
     margin: 0 1rem;
     list-style: none;
     position: relative;
