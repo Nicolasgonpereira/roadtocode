@@ -28,6 +28,16 @@ const ImageWrapper = styled.div`
   height: 185px;
   max-height: 185px;
   min-height: 185px;
+
+  @media screen and (min-width:768px){
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  
+    &:hover {
+      transform: scale(2);
+      z-index: 10;
+    }
+  }
 `;
 
 const ContentWrapper = styled.div`
