@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import Heroimg from "../../assets/blog-card-skeleton.jpg";
 
 const HeroSectionContainer = styled.section`
     display: flex;
@@ -18,7 +17,7 @@ const ImgContainer = styled.img`
     width: 100%;
     max-width: 400px;
     height: auto;
-    border-radius: 1rem;
+    border-radius: 32px;
 `
 
 const InfoContainer = styled.div`
@@ -26,7 +25,6 @@ const InfoContainer = styled.div`
     max-width: 400px;
     margin: 0 2rem 0 0;
 
-    
     @media screen and (max-width:768px){
         width: 100%;
         margin: 0;
@@ -74,15 +72,10 @@ const ButtonOutline = styled.button`
 export default function HeroSection() {
     return(
         <HeroSectionContainer>
-            <>
-                <ImgContainer src={Heroimg} alt="Foto de Nicolas Gonçalves Pereira" />
-            </>
+            <ImgContainer src={'/herosection.jpg'} alt="Foto de Nicolas Gonçalves Pereira" />
             <InfoContainer>
                 <Title>
-                    Estou em uma jornada contínua para me tornar um desenvolvedor cada vez melhor.
-                    Aqui você encontrará projetos que desenvolvi e insights sobre o que estou estudando.
-                    Meu objetivo é compartilhar o aprendizado que tenho obtido e demonstrar o que estou desenvolvendo.
-                    Vamos explorar o mundo da programação juntos!
+                    Engenheiro civil de formação, migrei para o desenvolvimento de software com foco em front-end. Atualmente cursando Análise e Desenvolvimento de Sistemas. Estou sempre aprendendo e buscando aplicar novas tecnologias e soluções inovadoras.
                 </Title>
                 <div style={{display:'flex', justifyContent:'space-between', padding:'0'}}>
                     <ButtonContained as={Link} to={"/projects"}>Ver os projetos</ButtonContained>
@@ -92,3 +85,4 @@ export default function HeroSection() {
         </HeroSectionContainer>
     )
 }
+
