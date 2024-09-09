@@ -1,36 +1,51 @@
 import { FaGithub } from 'react-icons/fa';
 import { IoRadio } from "react-icons/io5";
-import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import HardSkillCard from '../../components/HardSkillCard';
 import { formatDate } from '../Blog/BlogCard';
 
 const Article = styled.article<{$boxAlign:string;}>`
   display: flex;
-  flex-direction: ${props=>props.$boxAlign ==='left'?'row':'row-reverse'};
+  flex-direction: column;
   align-items: center;
   margin: 2rem 0;
   justify-content: center;
+  width: 80%;
+  max-width: 100%;
+
+  @media screen and (max-width:768px) {
+    width: 100%;
+  }
 `;
 
 const ImageWrapper = styled.div`
   display: flex;
+  align-items: center;
   margin: 0 1rem;
   width: 300px;
+  max-width: 300px;
+  min-height: 300px;
   height: 185px;
+  max-height: 185px;
+  min-height: 185px;
 `;
 
 const ContentWrapper = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
+  align-items: center;
   margin: 0 1rem;
-  width: 50%;
+  width: 100%;
+
+  @media screen and (max-width:768px) {
+    flex-direction: column;
+  }
 `;
 
 const Title = styled.h2`
   font-size: 2rem;
-  margin: 0;
+  margin: 0 1rem;
 `;
 
 const Summary = styled.p`
@@ -48,6 +63,10 @@ const SkillUsedWrapper = styled.div<{$boxAlign:string;}>`
   justify-content: ${props=>props.$boxAlign ==='right'?'end':''};
   align-items: center;
   margin-top: 1rem;
+
+  @media screen and (max-width:768px) {
+    justify-content: center;
+  }
 `
 
 const ButtonGitHub = styled.button<{disabled?: boolean}>`
@@ -73,6 +92,12 @@ const TitleWrapper = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
+  margin: 0 1rem;
+`
+
+const InfoWrapper = styled.div`
+  
 `
 
 
@@ -89,28 +114,30 @@ interface Props {
 export default function ProjectCard({projectInfo, align}:{projectInfo:Props, align:'left'|'right'}) {
     return (
     <Article $boxAlign={align}>
-        <ImageWrapper>
-            <img src={`${projectInfo.image}`} alt ={`Captura de tela do app ${projectInfo.title}`} width='100%' height='100%' style={{borderRadius:'1rem'}} />
-        </ImageWrapper>
+      <TitleWrapper>
+        <Title>{projectInfo.title}</Title>
+        <div style={{display:'flex', flexDirection:'row', alignItems:'center'}}>
+          <ButtonGitHub as={projectInfo.github===""?'button':'a'} href={projectInfo.github} target='_blank' disabled={projectInfo.github===""}>
+            <FaGithub style={{width:'40px',height:'40px'}} />
+          </ButtonGitHub>
+          <ButtonLive as={'a'} href={projectInfo.live} target='_blank'>
+            <IoRadio style={{width:'40px',height:'40px'}} />
+          </ButtonLive>
+        </div>
+      </TitleWrapper>
       <ContentWrapper>
-          <TitleWrapper>
-            <Title>{projectInfo.title}</Title>
-            <div style={{display:'flex', flexDirection:'row', alignItems:'center'}}>
-              <ButtonGitHub as={projectInfo.github===""?'':Link} to={projectInfo.github} disabled={projectInfo.github===""?true:false}>
-                <FaGithub style={{width:'40px',height:'40px'}} />
-              </ButtonGitHub>
-              <ButtonLive as={Link} to={projectInfo.live}>
-                <IoRadio style={{width:'40px',height:'40px'}} />
-              </ButtonLive>
-            </div>
-          </TitleWrapper>
-        <Summary>{projectInfo.description}</Summary>
-        <DateWrapper>{formatDate(projectInfo.date)}</DateWrapper>
-        <SkillUsedWrapper $boxAlign={align}>
-          {projectInfo.tech.map(e=>(
-            <HardSkillCard key={e} tech={e}/>
-          ))}
-        </SkillUsedWrapper>
+          <ImageWrapper>
+              <img src={`${projectInfo.image}`} alt ={`Captura de tela do app ${projectInfo.title}`} width='300px' height='185px' style={{borderRadius:'1rem'}} />
+          </ImageWrapper>
+          <InfoWrapper>
+            <Summary>{projectInfo.description}</Summary>
+            <DateWrapper>{formatDate(projectInfo.date)}</DateWrapper>
+            <SkillUsedWrapper $boxAlign={align}>
+              {projectInfo.tech.map(e=>(
+                <HardSkillCard key={e} tech={e}/>
+              ))}
+            </SkillUsedWrapper>
+          </InfoWrapper>
       </ContentWrapper>
     </Article>
   );

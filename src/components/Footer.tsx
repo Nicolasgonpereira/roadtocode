@@ -32,7 +32,7 @@ export default function Footer() {
                         <CiMail />
                     </ButtonLink>
                 </div>
-                <div style={{display:'flex', width:'60%', justifyContent:'center'}}>
+                <div style={{display:'flex', width:'100%', justifyContent:'center', textAlign:'center'}}>
                     <p>Desenvolvedor front-end apaixonado por criar interfaces modernas e funcionais.</p>
                 </div>
                 <p style={{margin:'0', color:"#6b6b6b"}}>

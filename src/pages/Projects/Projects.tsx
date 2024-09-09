@@ -6,9 +6,16 @@ import ProjectCard from "./ProjectCard";
 
 const ProjectWrapper = styled.main`
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
     padding: 0 15%;
     margin: 40px 0;
+
+    @media screen and (max-width:768px) {
+        padding: 0;
+    }
 `
 
 export interface IProject {

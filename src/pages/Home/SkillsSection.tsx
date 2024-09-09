@@ -8,12 +8,28 @@ const SkillSectionContainer = styled.section`
     align-items: center;
 `
 
+const SkillWrapper = styled.div`
+    display: flex;
+    align-items: center;
+
+    @media screen and (max-width:768px) {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        justify-content: center;
+        place-items: center;
+
+        & > :nth-last-child(1) {
+            grid-column: 2 / span 2;
+        }
+    }
+`
+
 
 export default function SkillsSection() {
     return(
         <SkillSectionContainer>
             <h2>Habilidades</h2>
-            <div style={{display:'flex', alignItems:'center'}}>
+            <SkillWrapper>
                     <HardSkillCard tech={"HTML"} />
                     <HardSkillCard tech={"CSS"} />
                     <HardSkillCard tech={"Git"} />
@@ -23,7 +39,7 @@ export default function SkillsSection() {
                     <HardSkillCard tech={"React"} />
                     <HardSkillCard tech={"NodeJS"} />
                     <HardSkillCard tech={"NextJS"} />
-            </div>
+            </SkillWrapper>
         </SkillSectionContainer>
     )
 }
