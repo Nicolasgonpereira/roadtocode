@@ -1,6 +1,5 @@
 import { CiMail } from "react-icons/ci";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const FooterContainer = styled.div`
@@ -22,13 +21,13 @@ export default function Footer() {
             <FooterContainer>
                 <h2>Contatos</h2>
                 <div style={{display:'flex', flexDirection:'row'}}>
-                    <ButtonLink as={Link} to="https://github.com/Nicolasgonpereira">
+                    <ButtonLink as={'a'} href="https://github.com/Nicolasgonpereira" target="_blank" >
                         <FaGithub />
                     </ButtonLink>
-                    <ButtonLink as={Link} to="https://www.linkedin.com/in/nicolasgoncalvespereira">
+                    <ButtonLink as={'a'} href="https://www.linkedin.com/in/nicolasgoncalvespereira" target="_blank" >
                         <FaLinkedin />
                     </ButtonLink>
-                    <ButtonLink as={Link} to="mailto:nicolasgp.ec@gmail.com">
+                    <ButtonLink as={'a'} href="mailto:nicolasgp.ec@gmail.com" >
                         <CiMail />
                     </ButtonLink>
                 </div>
