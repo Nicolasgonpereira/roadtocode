@@ -7,7 +7,7 @@ const InputWrapper = styled.div`
   width: 100%;
 `;
 
-const StyledInput = styled.input`
+const StyledInput = styled.textarea`
   box-sizing: border-box;
   width: 100%;
   padding: 10px;
@@ -16,6 +16,8 @@ const StyledInput = styled.input`
   border-radius: 4px;
   background: transparent;
   outline: none;
+  white-space: pre-wrap;
+  
 
   &:focus {
     border-color: #007BFF;
@@ -41,7 +43,7 @@ const StyledLabel = styled.label`
   pointer-events: none;
 `;
 
-export default function Input ({ label, ...props }: { label: string } & React.InputHTMLAttributes<HTMLInputElement>) {
+export default function TextArea ({ label, ...props }: { label: string } & React.InputHTMLAttributes<HTMLTextAreaElement>) {
     return(
         <InputWrapper>
             <StyledInput 
