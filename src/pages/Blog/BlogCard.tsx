@@ -68,7 +68,7 @@ export default function BlogCard({post, align}:{post:Post, align:'left'|'right'}
   <Article $boxAlign={align}>
     <ImageWrapper>
       <LinkPost to={post.slug}>
-        <img src={post.thumb_url} alt={`Capa do post ${post.title}`} width='100%' height='185px' style={{borderRadius:'1rem'}} />
+        <img src={post.thumb_url} alt={`Capa do post ${post.title}`} width='100%' height='100%' style={{borderRadius:'1rem'}} />
       </LinkPost>
     </ImageWrapper>
     <ContentWrapper>

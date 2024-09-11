@@ -5,6 +5,7 @@ const Content = styled.article`
     line-height: 1.6;
     color: #fff;
     margin: 16px 0;
+    width: 100%;
 
     img {
         max-width: 100%;

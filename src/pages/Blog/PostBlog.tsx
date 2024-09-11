@@ -3,7 +3,6 @@ import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import styled from 'styled-components'
 import { apiroot } from '../../App'
-import Hero from '../../assets/blog-card-skeleton.jpg'
 import { Post } from './Blog'
 import { formatDate } from './BlogCard'
 import PostContent from './PostContent'
@@ -19,8 +18,8 @@ const PageWrapper = styled.main`
 `
 
 const Image = styled.img`
-    width: 100%;
-    aspect-ratio: 3.5 / 1;
+    width: 600px;
+    /* aspect-ratio: 3.5 / 1; */
     margin: 0 0 1rem 0;
 `
 
@@ -57,7 +56,7 @@ export default function PostBlog() {
         <PageWrapper>
             {post && 
             <>
-            <Image src={Hero} alt="ilustração do post" />
+            <Image src={post.image_url} alt="ilustração do post" />
             <PostWrapper>
                 <Title>{post.title}</Title>
                 <Date>
