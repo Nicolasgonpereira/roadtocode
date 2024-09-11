@@ -10,18 +10,9 @@ const SkillSectionContainer = styled.section`
 
 const SkillWrapper = styled.div`
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
-
-    @media screen and (max-width:768px) {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        justify-content: center;
-        place-items: center;
-
-        & > :nth-last-child(1) {
-            grid-column: 2 / span 2;
-        }
-    }
 `
 
 
